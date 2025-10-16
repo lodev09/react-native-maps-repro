@@ -14,7 +14,12 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.anonymous.reactnativemapsrepro",
+      "config": {
+        "googleMapsApiKey": "AIzaSyBeaou3cjmq_BED6HlTRdg5fSyArUCzoTM",
+        "usesNonExemptEncryption": false,
+      },
     },
     "android": {
       "adaptiveIcon": {
@@ -22,7 +27,13 @@
         "backgroundColor": "#ffffff"
       },
       "edgeToEdgeEnabled": true,
-      "predictiveBackGestureEnabled": false
+      "predictiveBackGestureEnabled": false,
+      "package": "com.anonymous.reactnativemapsrepro",
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyBeaou3cjmq_BED6HlTRdg5fSyArUCzoTM",
+        },
+      },
     },
     "web": {
       "bundler": "metro",
@@ -30,7 +41,14 @@
       "favicon": "./assets/images/favicon.png"
     },
     "plugins": [
-      "expo-router"
+      "expo-router",
+      [
+        "react-native-maps",
+        {
+          "iosGoogleMapsApiKey": "AIzaSyBeaou3cjmq_BED6HlTRdg5fSyArUCzoTM",
+          "androidGoogleMapsApiKey": "AIzaSyBeaou3cjmq_BED6HlTRdg5fSyArUCzoTM"
+        },
+      ],
     ],
     "experiments": {
       "typedRoutes": true
